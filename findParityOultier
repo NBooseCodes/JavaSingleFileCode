@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class FindOutlier{
+  static int find(int[] integers){
+    ArrayList<Integer> even = new ArrayList<>();
+    ArrayList<Integer> odd = new ArrayList<>();
+    for (int value : integers) {
+      if (value % 2 == 0) {
+        even.add(value);
+      } else {
+        odd.add(value);
+      }
+    }
+    if (even.size() < odd.size()) {
+      return even.get(0);
+    } else {
+      return odd.get(0);
+    }
+  }
+}
