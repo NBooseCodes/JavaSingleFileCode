@@ -1,0 +1,8 @@
+import java.lang.*;
+class Solution {
+  public static String camelCase(String input) {
+    String[] stringArray = input.split("(?=[A-Z])");
+    String result = new String();
+    return result.join(" ", stringArray);
+  }
+}
